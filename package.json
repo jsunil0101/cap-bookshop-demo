@@ -13,11 +13,16 @@
     "passport": "^0"
   },
   "devDependencies": {
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sap/ux-specification": "^1.102.4",
+    "@sapui5/ts-types": "^1.92.2",
+    "eslint": "^7.32.0",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
     "start": "cds run",
-    "h-deploy": "cds deploy --to hana:cap-hana-fe"
+    "h-deploy": "cds deploy --to hana:cap-hana-fe",
+    "watch-cap-bookshop": "cds watch --open cap-bookshop/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "engines": {
     "node": "^16.15"
@@ -70,5 +75,8 @@
         "kind": "cloudfoundry"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/cap-bookshop"
+  ]
 }
